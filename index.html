@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giancarlo A. Haidar's Portfolio</title>
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* Full-width Container */
+        .container {
+            width: 100%;
+            padding: 0 60px; /* Consistent padding on sides */
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+            padding: 15px 60px;
+            z-index: 1000;
+        }
+        
+        /* Header Bottom Border Line within Padding */
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background-color: #f6f6f6;
+        }
+
+        .header-left {
+            text-align: left;
+        }
+
+        .header h1, .header h2 {
+            font-weight: 400;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Centered Navigation Links */
+        .header-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-center a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        /* Overline on "Tell" instead of "Show" */
+        .header-center a:nth-child(2).active::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+        }
+
+        /* Header Right Links */
+        .header-right {
+            margin-left: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-right a {
+            color: #0073b1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a:hover {
+            color: #005582;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px 60px;
+            font-size: 1rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background-color: transparent;
+            position: relative;
+            margin-top: auto;
+        }
+
+        /* Full-width Footer Line */
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #f6f6f6;
+        }
+
+        .footer .footer-section {
+            display: flex;
+            flex-direction: column;
+            margin-right: 40px;
+        }
+
+        .footer .footer-section a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-section a:hover {
+            color: #005582;
+        }
+
+        .footer .footer-section strong {
+            margin-bottom: 10px;
+        }
+
+        .footer .contact-message {
+            text-align: left;
+            font-size: 1.2rem;
+            color: #555;
+            margin-right: 40px;
+        }
+
+        .footer .email {
+            text-align: left;
+            font-size: 1rem;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .footer .last-updated {
+            font-size: 1rem;
+            color: #888;
+            margin-right: 40px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 40px 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Column Titles */
+        .column-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Experience and Description Details */
+        .experience-details, .description-details {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .experience-details strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Centered Navigation -->
+    <header class="header">
+        <div class="header-left">
+            <h1>Giancarlo A. Haidar</h1>
+            <h2>GBDA Student</h2>
+        </div>
+        <div class="header-center">
+            <a href="https://drive.google.com/file/d/1MbBoBFX_vRjV7aRjpS_mjMmPi963o-9F/view?usp=sharing" target="_blank">Show</a>
+            <a href="https://drive.google.com/file/d/1MbBoBFX_vRjV7aRjpS_mjMmPi963o-9F/view?usp=sharing" target="_blank" class="active">Tell</a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.linkedin.com/in/giancarlo-haidar/" target="_blank">LinkedIn ↗</a>
+            <a href="https://drive.google.com/file/d/1MbBoBFX_vRjV7aRjpS_mjMmPi963o-9F/view?usp=sharing" target="_blank">Resume ↗</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="container about-section">
+        <div>
+            <div class="column-title">About</div>
+            <div class="experience-details">
+                Aspiring UI/UX Designer with a focus on enhancing user experiences. Currently specializing in Global Business & Digital Arts at the University of Waterloo. Passionate about leveraging design and business insights in tech innovations.
+            </div>
+        </div>
+        
+        <div>
+            <div class="column-title">Experience</div>
+            <div class="experience-details">
+                <strong>Create IT Inc.</strong> <br>
+                Assistant Instructor | Jun 2022 - Jul 2024 <br>
+                <span>Toronto, Ontario, Canada</span>
+                <p>Facilitated daily program setup and provided instructional support for classes serving children aged 6 to 13.</p>
+                
+                <strong>Neurowealth Group Inc.</strong> <br>
+                General Manager | Nov 2023 - Jan 2024 <br>
+                <span>Stratford, Ontario, Canada</span>
+                <p>Led product development initiatives, aligning milestones with strategic objectives.</p>
+                
+                <strong>ForeverSpin</strong> <br>
+                General Assistance | Dec 2020 <br>
+                <span>Toronto, Ontario, Canada</span>
+                <p>Specialized in polishing spinning tops, achieving optimal shine with unique techniques.</p>
+            </div>
+        </div>
+        
+        <div>
+            <div class="column-title">Education</div>
+            <div class="experience-details">
+                <strong>University of Waterloo</strong> <br>
+                Bachelor of Global Business and Digital Arts | Sep 2023 - Dec 2027 <br>
+                <p>Specializations: UX Design, Digital Media Design</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Link Sections and Last Updated -->
+    <footer class="footer">
+        <div class="footer-section">
+            <strong>Main</strong>
+            <a href="#work">Show</a>
+            <a href="#about">Tell</a>
+        </div>
+        <div class="footer-section">
+            <strong>Contact</strong>
+            <a href="https://www.linkedin.com/in/giancarlo-haidar/" target="_blank">LinkedIn ↗</a>
+            <a href="https://drive.google.com/file/d/1MbBoBFX_vRjV7aRjpS_mjMmPi963o-9F/view?usp=sharing" target="_blank">Resume ↗</a>
+        </div>
+        <div class="contact-message">
+            Let's have a coffee chat! <br>
+            <a href="mailto:giancarlo.a.haidar@gmail.com" class="email">giancarlo.a.haidar@gmail.com</a>
+        </div>
+        <div class="last-updated">
+            Last updated November 2024
+        </div>
+    </footer>
+</body>
+</html>
