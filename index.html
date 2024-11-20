@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN-CA">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giancarlo A. Haidar's Portfolio</title>
-    <!-- Link to Google Fonts for Roboto -->
+    <title>Giancarlo.A.Haidar-Tell</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts for Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Link to Google Fonts for Archivo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-      /* Basic Reset */
+      /* CSS Universal (*) Selector: https://www.w3schools.com/cssref/sel_all.php */
       * {
         margin: 0;
         padding: 0;
@@ -32,19 +30,14 @@
         color: #333;
         scroll-behavior: smooth;
         font-family: 'Archivo', sans-serif;
-        /* Set Archivo as default font for body */
       }
 
-      /* Full-width Container */
       .container {
         width: 100%;
         padding: 0 60px;
-        /* Consistent padding on sides */
-        max-width: 1600px;
         margin: auto;
       }
 
-      /* Header */
       .header {
         display: flex;
         justify-content: space-between;
@@ -55,10 +48,8 @@
         padding: 15px 60px;
         z-index: 1000;
         font-family: 'Roboto', sans-serif;
-        /* Roboto font for header */
       }
 
-      /* Header Bottom Border Line within Padding */
       .header::after {
         content: "";
         position: absolute;
@@ -88,10 +79,10 @@
         color: #777;
       }
 
-      /* Centered Navigation Links */
       .header-center {
         position: absolute;
         left: 50%;
+        /* CSS transform Property: https://www.w3schools.com/cssref/css3_pr_transform.php */
         transform: translateX(-50%);
         display: flex;
         gap: 60px;
@@ -105,7 +96,7 @@
         position: relative;
       }
 
-      /* Overline on "Tell" */
+      /* CSS :nth-child() Pseudo-class: https://www.w3schools.com/cssref/sel_nth-child.php */
       .header-center a:nth-child(2).active::before {
         content: '';
         position: absolute;
@@ -116,7 +107,10 @@
         background-color: #333;
       }
 
-      /* Header Right Links */
+      .header-center a.active {
+        color: #000;
+      }
+
       .header-right {
         margin-left: auto;
         display: flex;
@@ -127,6 +121,7 @@
         color: #0073b1;
         text-decoration: none;
         font-weight: bold;
+        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
         transition: color 0.3s;
         display: flex;
         align-items: center;
@@ -139,10 +134,10 @@
       /* Link Hover Effect */
       a:hover {
         background-color: #f6f6f6;
+        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
         transition: background-color 0.3s;
       }
 
-      /* Footer */
       .footer {
         padding: 20px 60px;
         font-size: 1rem;
@@ -155,10 +150,8 @@
         position: relative;
         margin-top: auto;
         font-family: 'Roboto', sans-serif;
-        /* Roboto font for footer */
       }
 
-      /* Full-width Footer Line */
       .footer::before {
         content: "";
         position: absolute;
@@ -211,7 +204,6 @@
         margin-right: 40px;
       }
 
-      /* About Section */
       .about-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -221,7 +213,6 @@
         margin: 0 auto;
       }
 
-      /* Column Titles */
       .column-title {
         font-weight: bold;
         margin-bottom: 10px;
