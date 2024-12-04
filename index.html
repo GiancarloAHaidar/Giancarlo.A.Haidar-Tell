@@ -16,6 +16,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        background-color: #0D0208;
       }
 
       html,
@@ -44,7 +45,6 @@
         align-items: center;
         position: sticky;
         top: 0;
-        background-color: #ffffff;
         padding: 15px 60px;
         z-index: 1000;
         font-family: 'Roboto', sans-serif;
@@ -57,7 +57,7 @@
         left: 60px;
         right: 60px;
         height: 2px;
-        background-color: #f6f6f6;
+        background-color: #292929ff;
       }
 
       .header-left {
@@ -71,12 +71,12 @@
 
       .header h1 {
         font-size: 1.5rem;
-        color: #333;
+        color: #ffffff;
       }
 
       .header h2 {
         font-size: 1rem;
-        color: #777;
+        color: #707070ff;
       }
 
       .header-center {
@@ -90,8 +90,8 @@
 
       .header-center a {
         text-decoration: none;
-        color: #333;
-        font-weight: bold;
+        color: #ffffff;
+
         font-size: 1.1rem;
         position: relative;
       }
@@ -104,11 +104,12 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #333;
+        background-color: #ffffff;
       }
 
       .header-center a.active {
-        color: #000;
+        color: #ffffff;
+        font-weight: bold;
       }
 
       .header-right {
@@ -118,9 +119,9 @@
       }
 
       .header-right a {
-        color: #0073b1;
+        color: #ffffff;
         text-decoration: none;
-        font-weight: bold;
+
         /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
         transition: color 0.3s;
         display: flex;
@@ -132,15 +133,18 @@
       }
 
       a:hover {
-        background-color: #f6f6f6;
-        /* CSS Transitions: https://www.w3schools.com/css/css3_transitions.asp */
-        transition: background-color 0.3s ease;
+        color: #008F11 !important;
+        /* Force green color for all links on hover */
+        transition: color 0.3s ease;
+        /* Smooth transition */
       }
+
+
 
       .footer {
         padding: 20px 60px;
         font-size: 1rem;
-        color: #666;
+        color: #707070ff;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -158,7 +162,7 @@
         left: 0;
         right: 0;
         height: 2px;
-        background-color: #f6f6f6;
+        background-color: #292929ff;
       }
 
       .footer .footer-section {
@@ -168,7 +172,7 @@
       }
 
       .footer .footer-section a {
-        color: #333;
+        color: #ffffff;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1rem;
@@ -182,20 +186,21 @@
       .footer .contact-message {
         text-align: left;
         font-size: 1.2rem;
-        color: #555;
+        color: #707070ff;
         margin-right: 40px;
       }
 
       .footer .email {
         text-align: left;
         font-size: 1rem;
-        color: #333;
+        color: #ffffff;
         margin-top: 5px;
+        text-decoration: underline dotted;
       }
 
       .footer .last-updated {
         font-size: 1rem;
-        color: #888;
+        color: #707070ff;
         margin-right: 40px;
       }
 
